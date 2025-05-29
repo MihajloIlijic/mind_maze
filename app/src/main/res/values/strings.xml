@@ -15,4 +15,5 @@
     <string name="landing_page_title">Keep Up</string>
     <string name="logout">Logout</string>
     <string name="settings_description_text">Settings</string>
+    <string name="levelDescription">Level</string>
 </resources>

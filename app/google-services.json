@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "900463089786",
-    "project_id": "example-ba086",
-    "storage_bucket": "example-ba086.firebasestorage.app"
+    "project_number": "555278185044",
+    "project_id": "mindmaze-5b0d1",
+    "storage_bucket": "mindmaze-5b0d1.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:900463089786:android:e3ba6d600a4212ead443c3",
+        "mobilesdk_app_id": "1:555278185044:android:fa9049476c0b24e572f3c1",
         "android_client_info": {
           "package_name": "com.example.fhj_student_app_part1"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBCSdUUnK3lfMilile6F4KEauy3UVeVFN0"
+          "current_key": "AIzaSyA4Ph-fY_tgQE3b_J3uJWe1yI5s2T6JGCc"
         }
       ],
       "services": {

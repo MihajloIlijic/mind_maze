@@ -25,6 +25,7 @@ class LoginActivity : AppCompatActivity() {
             insets
         }
 
+
         auth = FirebaseAuth.getInstance()
 
         val emailEditText = findViewById<TextInputEditText>(R.id.et_login_email)

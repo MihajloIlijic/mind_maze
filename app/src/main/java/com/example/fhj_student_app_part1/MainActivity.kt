@@ -19,6 +19,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var levelsRecyclerView: RecyclerView
     private lateinit var fabProfile: FloatingActionButton
 
+    companion object {
+        private const val REQUEST_LEVEL_COMPLETE = 1
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -56,7 +60,7 @@ class MainActivity : AppCompatActivity() {
     private fun setupLevels() {
         // TODO: Replace with actual level data from Firebase
         val levels = listOf(
-            Level(1, "The Beginning", "Start your journey", false, false),
+            Level(1, "The Beginning", "Find the pattern in the sequence", false, false),
             Level(2, "First Challenge", "Test your skills", true, false),
             Level(3, "The Maze", "Navigate through complexity", true, false),
             Level(4, "Logic Gates", "Solve the puzzle", true, false),
@@ -73,7 +77,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startLevel(level: Level) {
-        // TODO: Implement level start
-        Toast.makeText(this, "Starting ${level.name}", Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, LevelActivity::class.java).apply {
+            putExtra("level", level)
+        }
+        startActivityForResult(intent, REQUEST_LEVEL_COMPLETE)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQUEST_LEVEL_COMPLETE && resultCode == RESULT_OK) {
+            // TODO: Update level completion status in Firebase
+            Toast.makeText(this, "Level completed!", Toast.LENGTH_SHORT).show()
+        }
     }
 }
